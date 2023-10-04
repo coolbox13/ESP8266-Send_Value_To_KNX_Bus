@@ -1,4 +1,4 @@
-// Optimized and standardized ESP8266 version for KNX communication
+// Optimized and standardized version for KNX communication compatible with ESP8266 and ESP32
 
 #include <esp-knx-ip.h>
 
@@ -11,7 +11,7 @@
 
 // Constants
 const char* SSID = "ssid";               // WiFi SSID
-const char* PASSWORD = "password";          // WiFi Password
+const char* PASSWORD = "password";       // WiFi Password
 const uint32_t SERIAL_BAUD_RATE = 115200;        // Serial communication baud rate
 const uint32_t WIFI_CONNECTION_DELAY = 1000;     // Delay in ms while waiting for WiFi connection
 const uint32_t LOOP_DELAY = 10000;               // Delay in ms for the main loop
