@@ -26,3 +26,25 @@ The code initializes the ESP8266 WiFi module, connects it to a specified WiFi ne
    ```bash
    git clone https://github.com/yourusername/esp8266-knx.git
 
+## Install Libraries
+Open Arduino IDE and install the required libraries:
+- esp-knx-ip
+- ESP8266WiFi
+- WiFiUdp
+
+## Update WiFi Credentials
+Open the main code file and update the following lines with your WiFi credentials:
+
+```cpp
+const char* SSID = "ssid";
+const char* PASSWORD = "password";
+```
+
+## Upload to ESP8266
+Connect your ESP8266 board to your computer, select the correct board and port in the Arduino IDE, and upload the code.
+
+## Acknowledgments
+
+- Nico Weichbrodt (envy) for the esp-knx-ip library, which provides the essential functionality for KNX communication with the ESP8266 module.
+- KNX Association for the KNX protocol specification.
+- ESP8266 community for the WiFi module support.
