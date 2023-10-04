@@ -38,14 +38,6 @@ Open Arduino IDE and install the required libraries:
 - WiFiUdp
 - WiFiManager
 
-## Update WiFi Credentials
-Open the main code file and update the following lines with your WiFi credentials:
-
-```cpp
-const char* SSID = "ssid";
-const char* PASSWORD = "password";
-```
-
 ## Upload to ESP8266
 Connect your ESP8266 board to your computer, select the correct board and port in the Arduino IDE, and upload the code.
 
