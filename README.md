@@ -1,9 +1,55 @@
-# ESP8266-Send_Value_To_KNX_Bus
+ESP8266 KNX Communication
 
-Making use of the library https://github.com/envy/esp-knx-ip from Nico Weichbrodt, envy. A simple script to send a value to a group address on the KNX bus.
+This repository contains code for setting up an ESP8266 module to communicate with the KNX home automation protocol.
 
-Default physical address is changed to 1.1.201, which works in my setup.
-A value of intitially 40% is now send to address 3/0/15. The address is dummy for me. The percentage get's raised in the main loop.
+Overview
 
-The code is meant to be incorporated in a larger programm which is supposed to be a cheap replacement of a real KNX Thermostat.
-You could make use of this script to send values to the KNX bus yourself.
+The code initializes the ESP8266 WiFi module, connects it to a specified WiFi network, and then communicates with the KNX protocol to send and receive data. The main functionality includes setting a physical address for the ESP8266 module in the KNX network and sending a counter value to a specified KNX address.
+
+Features
+
+WiFi connectivity using ESP8266.
+KNX communication setup.
+Setting a physical address in the KNX network.
+Sending a counter value to a specified KNX address.
+Prerequisites
+
+ESP8266 development board.
+Arduino IDE with ESP8266 board support installed.
+esp-knx-ip.h, ESP8266WiFi.h, and WiFiUdp.h libraries.
+Setup
+
+Clone the Repository
+bash
+Copy code
+git clone https://github.com/yourusername/esp8266-knx.git
+Install Libraries
+Open Arduino IDE and install the required libraries:
+esp-knx-ip
+ESP8266WiFi
+WiFiUdp
+Update WiFi Credentials
+Open the main code file and update the following lines with your WiFi credentials:
+cpp
+Copy code
+const char* SSID = "your_wifi_ssid";
+const char* PASSWORD = "your_wifi_password";
+Upload to ESP8266
+Connect your ESP8266 board to your computer, select the correct board and port in the Arduino IDE, and upload the code.
+Usage
+
+Once the code is uploaded and the ESP8266 is powered on, it will automatically connect to the specified WiFi network and start communicating with the KNX protocol. The serial monitor will display the WiFi connection status and the ESP8266's IP address.
+
+Contributing
+
+If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+
+Nico Weichbrodt (envy) for the esp-knx-ip library, which provides the essential functionality for KNX communication with the ESP8266 module.
+KNX Association for the KNX protocol specification.
+ESP8266 community for the WiFi module support.
