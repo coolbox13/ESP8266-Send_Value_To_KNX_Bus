@@ -53,3 +53,4 @@ Connect your ESP8266 board to your computer, select the correct board and port i
 - Nico Weichbrodt (envy) for the esp-knx-ip library, which provides the essential functionality for KNX communication with the ESP8266 module.
 - KNX Association for the KNX protocol specification.
 - ESP8266 community for the WiFi module support.
+- WiFiManager Library: Special thanks to the developers and contributors of the WiFiManager library for providing an elegant solution to manage WiFi configurations for ESP8266 and ESP32 devices.
