@@ -36,6 +36,7 @@ Open Arduino IDE and install the required libraries:
 - esp-knx-ip
 - ESP8266WiFi
 - WiFiUdp
+- WiFiManager
 
 ## Update WiFi Credentials
 Open the main code file and update the following lines with your WiFi credentials:
