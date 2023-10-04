@@ -1,12 +1,12 @@
-ESP8266 KNX Communication
+#ESP8266 KNX Communication
 
 This repository contains code for setting up an ESP8266 module to communicate with the KNX home automation protocol.
 
-Overview
+##Overview
 
 The code initializes the ESP8266 WiFi module, connects it to a specified WiFi network, and then communicates with the KNX protocol to send and receive data. The main functionality includes setting a physical address for the ESP8266 module in the KNX network and sending a counter value to a specified KNX address.
 
-Features
+##Features
 
 WiFi connectivity using ESP8266.
 KNX communication setup.
