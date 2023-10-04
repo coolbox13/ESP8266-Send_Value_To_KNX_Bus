@@ -27,7 +27,7 @@ The code initializes the ESP8266 WiFi module, connects it to a specified WiFi ne
    git clone https://github.com/yourusername/esp8266-knx.git
    ```
 
-   Or.. just download the .ino file..:)
+Or.. just download the .ino file..:)
 
 ## Install Libraries
 Open Arduino IDE and install the required libraries:
