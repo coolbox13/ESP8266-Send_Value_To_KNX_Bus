@@ -1,19 +1,16 @@
 // Optimized and standardized version for KNX communication compatible with ESP8266 and ESP32
 
 #include <esp-knx-ip.h>
+#include <WiFiManager.h> // Include the WiFiManager library
 
 #ifdef ESP8266
     #include <ESP8266WiFi.h>
-    #include <WiFiUdp.h>
 #elif defined(ESP32)
     #include <WiFi.h>
 #endif
 
 // Constants
-const char* SSID = "ssid";               // WiFi SSID
-const char* PASSWORD = "password";       // WiFi Password
 const uint32_t SERIAL_BAUD_RATE = 115200;        // Serial communication baud rate
-const uint32_t WIFI_CONNECTION_DELAY = 1000;     // Delay in ms while waiting for WiFi connection
 const uint32_t LOOP_DELAY = 10000;               // Delay in ms for the main loop
 
 // Global variables
@@ -43,14 +40,12 @@ void setup() {
     // Start serial communication
     Serial.begin(SERIAL_BAUD_RATE);
 
-    // Connect to WiFi
-    Serial.println("Connecting to WiFi...");
-    WiFi.begin(SSID, PASSWORD);
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(WIFI_CONNECTION_DELAY);
-        Serial.println("Waiting for WiFi connection...");
-    }
-    Serial.print("Connected to WiFi!\nIP Address: ");
+    // WiFiManager setup
+    WiFiManager wifiManager;
+    wifiManager.autoConnect("AutoConnectAP"); // Name of the Access Point when in configuration mode
+    Serial.println("Connected to WiFi!");
+
+    Serial.print("IP Address: ");
     Serial.println(WiFi.localIP());
 
     // Start KNX communication
