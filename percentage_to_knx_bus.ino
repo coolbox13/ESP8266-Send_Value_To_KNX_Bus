@@ -1,8 +1,13 @@
 // Optimized and standardized ESP8266 version for KNX communication
 
 #include <esp-knx-ip.h>
-#include <ESP8266WiFi.h>
-#include <WiFiUdp.h>
+
+#ifdef ESP8266
+    #include <ESP8266WiFi.h>
+    #include <WiFiUdp.h>
+#elif defined(ESP32)
+    #include <WiFi.h>
+#endif
 
 // Constants
 const char* SSID = "ssid";               // WiFi SSID
