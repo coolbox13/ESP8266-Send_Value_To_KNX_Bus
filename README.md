@@ -1,4 +1,4 @@
-# ESP8266 KNX Communication
+# ESP8266/32 KNX Communication
 
 This repository contains code for setting up an ESP8266 module to communicate with the KNX home automation protocol.
 It changes the default physical address to 1.1.201 because that fits better in my KNX setup.
